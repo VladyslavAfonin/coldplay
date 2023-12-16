@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;900&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
+  background: $primary;
+  color: $light;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button {
+  border: none;
+  background: none;
+  font-family: "Nunito", sans-serif;
+  outline: none;
+  color: $light;
+  font-size: 16px;
+}
+
+a {
+  color: $light;
+  text-decoration: none;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.icon {
+  width: 12px;
+  height: 12px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+h2 {
+  color: $light;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.button-more {
+  color: $light;
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: underline;
+  display: block;
+  max-width: 140px;
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.25s all ease;
+
+  &:hover {
+    color: $action;
+  }
+}
+
+.loader {
+  min-height: 20vh;
+  width: 100%;
+  position: relative;
+  @include flex;
+  
+  img {
+    animation: beat 0.75s infinite;
+    max-width: 70px;
+  }
+}
+
+.page {
+  padding: 40px 0;
+  
+  &-title {
+    color: $light;
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .container {
+    max-width: 800px;
+  }
+  
+  h2 {
+    font-size: 22px;
+  }
+  
+  .page {
+    padding: 30px 0;
+    
+    &-title {
+      font-size: 48px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 650px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  .page {
+    padding: 25px 0;
+    
+    &-title {
+      font-size: 36px;
+    }
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .container {
+    max-width: 375px;
+  }
+  
+  h2 {
+    font-size: 18px;
+  }
+  
+  .page {
+    padding: 20px 0;
+    
+    &-title {
+      font-size: 28px;
+    }
+  }
+}
